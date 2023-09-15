@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Contact me</title>
+  </head>
+
+  <body>
+    <audio id="hover-sound" src="source/hover.mp3"></audio>
+
+    <img class="profile" src="source/profile.png" alt="" />
+    <h1 class="header">@ShadowSnow</h1>
+
+    <div class="flex">
+      <a href="https://www.facebook.com/ShadowWSsnow" target="_blank">
+        <div class="box facebook">
+          <img src="source/facebook.png" alt="" />
+          <div class="overlay">
+            <span class="text-facebook">Natthaphat Kanchanaanothai</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="https://www.instagram.com/shadoww_ssnow/" target="_blank">
+        <div class="box instagram">
+          <img src="source/instagram.png" alt="" />
+          <div class="overlay">
+            <span class="text-ig">shadoww_ssnow</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="https://github.com/donut9164" target="_blank">
+      <div class="box github">
+        <img src="source/github.png" alt="" />
+        <div class="overlay">
+          <span class="text-gh">donut9164</span>
+        </div>
+      </div>
+    </div>
+
+    <a href="https://open.spotify.com/user/m94oj7vwue95filq1dcountgf?si=4638fd48b6b74cb1" target="_blank">
+        <div class="box github">
+          <img src="source/github.png" alt="" />
+          <div class="overlay">
+            <span class="text-gh">donut9164</span>
+          </div>
+        </div>
+      </div>
+
+    <script>
+      const hoverSound = document.getElementById("hover-sound");
+      const boxes = document.querySelectorAll(".box");
+      const textElements = document.querySelectorAll(".text");
+
+      function playHoverSound() {
+        hoverSound.currentTime = 0;
+        hoverSound.play();
+      }
+
+      function stopHoverSound() {
+        hoverSound.pause();
+        hoverSound.currentTime = 0;
+      }
+
+      boxes.forEach((box) => {
+        box.addEventListener("mouseenter", playHoverSound);
+        box.addEventListener("mouseleave", stopHoverSound);
+
+        const textElement = box.querySelector(".text");
+        if (textElement) {
+          textElement.addEventListener("mouseenter", playHoverSound);
+          textElement.addEventListener("mouseleave", stopHoverSound);
+        }
+      });
+    </script>
+  </body>
+</html>

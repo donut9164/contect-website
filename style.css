@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap");
+
+body {
+  font-family: "Nunito", sans-serif;
+  background-color: rgb(221, 221, 221);
+}
+
+/* header */
+
+.profile {
+  position: absolute;
+  top: 17%;
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  vertical-align: middle;
+  width: 250px;
+  height: 255px;
+  border-radius: 50%;
+}
+
+.header {
+  position: absolute;
+  top: 32%;
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+}
+
+/* box style */
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+}
+
+.box {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  background-color: #f2f2f2;
+  color: black;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  transition: 0.2s;
+}
+
+/* facebook */
+
+.text-facebook {
+  cursor: pointer;
+  text-wrap: nowrap;
+  display: none;
+  position: absolute;
+  top: 46%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+.box:hover .text-facebook {
+  display: block; 
+}
+
+/* instagram */
+
+.text-ig {
+  cursor: pointer;
+  text-wrap: nowrap;
+  display: none;
+  position: absolute;
+  top: 51%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+.box:hover .text-ig {
+  display: block; 
+}
+
+/* github */
+
+.text-gh {
+  cursor: pointer;
+  text-wrap: nowrap;
+  display: none;
+  position: absolute;
+  top: 56%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+.box:hover .text-gh {
+  display: block; 
+  color: white;
+}
+
+/* box hover */
+
+.box:hover {
+  width: 700px;
+  box-shadow: rgba(79, 79, 79, 0.05) 0px 19px 38px,
+    rgba(97, 97, 97, 0.22) 0px 15px 12px;
+  display: block;
+}
+
+/* hover color */
+
+.box.facebook:hover {
+  background-color: #1877f2; /* Facebook blue on hover */
+}
+
+.box.instagram:hover {
+  background-image: linear-gradient(
+    43deg,
+    #4158d0 0%,
+    #c850c0 46%,
+    #ffcc70 100%
+  );
+}
+
+.box.github:hover {
+  background-color: #333; /* GitHub black on hover */
+}
